@@ -19,6 +19,8 @@ class GildedRose
           item.quality += 1 if item.sell_in < 11 && item.quality < 50
           item.quality += 1 if item.sell_in < 6 && item.quality < 50
         end
+      else
+        item.quality -= 1 if item.quality > 0
       end
     end
       # if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
